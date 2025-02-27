@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background: #111;
+    /* background: linear-gradient(90deg, #013672, #000); */
+    color: gray;
+
+    --mildTextColor: gray;
+    --brightTextColor: #fff;
+    --themeColor: chartreuse;
+}
+
+
+
+/* Loader Animation for the site.... */
+.loadWrapper {
+    position: fixed;
+    content: "";
+    top: 0%;
+    left: 0%;
+    width: 108%;
+    margin: auto;
+    height: 100vh;
+    background: #00000063;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9991;
+    transition: .1s;
+    border-radius: 0%;
+    backdrop-filter: blur(1px);
+}
+
+.loadWrapper.hide_loader {
+    transform: scale(0)
+}
+
+.loader_container {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    /* display: none; */
+}
+
+.load {
+    width: 200px;
+    height: 100px;
+    border: 0px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    /* background: black; */
+}
+
+.load:nth-child(1) {
+    border-bottom-width: 8px;
+    border-color: green;
+    animation: rotate1 .1s linear infinite;
+
+}
+
+
+@keyframes rotate1 {
+    0% {
+        transform: rotateX(35deg)rotateY(-45deg)rotateZ(0);
+    }
+
+    100% {
+        transform: rotateX(35deg)rotateY(-45deg)rotateZ(360deg);
+    }
+}
+
+.load:nth-child(2) {
+    border-top-width: 8px;
+    border-color: #000;
+    animation: rotate2 .1s linear infinite;
+
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotateX(15deg)rotateY(50deg)rotateZ(0);
+    }
+
+    100% {
+        transform: rotateX(15deg)rotateY(50deg)rotateZ(360deg);
+    }
+}
+
+.load:nth-child(3) {
+    border-right-width: 8px;
+    border-color: chartreuse;
+    animation: rotate3 .1s linear infinite;
+
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: rotateX(50deg)rotateY(10deg)rotateZ(0);
+    }
+
+    100% {
+        transform: rotateX(50deg)rotateY(10deg)rotateZ(360deg);
+    }
+}
+
+.load-txt {
+    color: #ffffff;
+    font-family: cursive;
+    font-size: 18px;
+    display: none;
+}
+
+
+
+/* Styling the landing page .........*/
+.landingPlace{
+    background: linear-gradient(90deg, #013672, #000);
+
+    min-height: 100vh;
+    min-width: 100%;
+    margin: auto;
+
+}
+.landingPlace .topHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+    max-height: 30vh;
+}
+.topHeader nav{
+
+}
+.topHeader nav a{
+    color: var(--mildTextColor);
+    text-decoration: none;
+    margin: 15px;
+    letter-spacing: 1.2px;
+    transition: all .5s;
+}
+.topHeader nav a:hover{
+    color: var(--themeColor);
+    text-decoration: underline;
+}
+.topHeader button{
+    background: transparent;
+    border-radius: 3px;
+    color: var(--themeColor);
+    border: .1px solid var(--mildTextColor);
+    padding: 10px 30px;
+    box-shadow: 1px 0px 1px 0px;
+}
+.landingPlace .contentWrapper{
+    position: relative;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contentWrapper .myName{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 40px;
+    /* padding: 30px; */
+    min-height: 90vh;
+    text-align: start;
+    width: 60%;
+    line-height: 1.5;
+    z-index: 9;
+}
+.myName h2{
+    font-size: 3em;
+    letter-spacing: 10px;
+    color: var(--brightTextColor);
+
+}
+.myName p{
+    font-size: 1.3em;
+    
+}
+
+
+.socialWrapper{
+    width: 100%;
+    min-height: 20vh;
+}
+.socialWrapper .socials{
+    display: flex;
+    justify-content:first baseline;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    min-height: 20vh;
+    border-radius: 4%;
+}
+.socials h1{
+    font-size: 2em;
+    color: var(--brightTextColor);
+}
+.socials .home_icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+.home_icons a{
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--themeColor);
+    border-radius: 40%;
+}
+
+
+.contentWrapper .absoluteImage{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 1%;
+    width: 60%;
+    height: auto;
+    min-height: 90vh;
+    z-index: 8;
+
+    background: url(assets/nguyo1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 80% 23%;
+    border-radius: 10%;
+
+    mask-image: linear-gradient(#000,#000, #0000009f, #00000042, transparent);
+    -webkit-mask-image: linear-gradient(#000, #000, #0000009f, #00000042, transparent);
+}
