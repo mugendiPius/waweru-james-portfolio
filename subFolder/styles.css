@@ -7,11 +7,12 @@
 body{
     background: #111;
     /* background: linear-gradient(90deg, #013672, #000); */
+    background: linear-gradient(90deg, #000, #013672);
     color: gray;
 
-    --mildTextColor: gray;
+    --mildTextColor: rgb(168, 167, 167);
     --brightTextColor: #fff;
-    --themeColor: chartreuse;
+    --themeColor: #00c3ff;
 }
 
 
@@ -63,7 +64,7 @@ body{
 
 .load:nth-child(1) {
     border-bottom-width: 8px;
-    border-color: green;
+    border-color: var(--themeColor);
     animation: rotate1 .1s linear infinite;
 
 }
@@ -98,7 +99,7 @@ body{
 
 .load:nth-child(3) {
     border-right-width: 8px;
-    border-color: chartreuse;
+    border-color: var(--themeColor);
     animation: rotate3 .1s linear infinite;
 
 }
@@ -130,6 +131,9 @@ body{
     min-width: 100%;
     margin: auto;
 
+    mask-image: linear-gradient(#000, #000, #0000009f, transparent);
+    -webkit-mask-image: linear-gradient(#000, #000, #0000009f, transparent);
+    border-bottom: .1px solid var(--mildTextColor);
 }
 .landingPlace .topHeader{
     display: flex;
@@ -161,7 +165,16 @@ body{
     border: .1px solid var(--mildTextColor);
     padding: 10px 30px;
     box-shadow: 1px 0px 1px 0px;
+    cursor: pointer;
+    transition: all .5s;
+
 }
+.topHeader button:hover{
+    background: linear-gradient(90deg, #013672, #000);
+    border: .1px solid rgba(128, 128, 128, 0.24);
+    box-shadow: 0px .5px 0px 0px;
+}
+
 .landingPlace .contentWrapper{
     position: relative;
     width: 95%;
@@ -192,6 +205,20 @@ body{
 .myName p{
     font-size: 1.3em;
     
+}
+.myName .downloadCv{
+    border: .1px solid gray;
+    color: var(--brightTextColor);
+    background-color: transparent;
+    padding: 7px 14px;
+    border-radius: 3px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+}
+.myName .downloadCv:hover{
+    background: linear-gradient(90deg, #013672, #000);
+    box-shadow: 0px .5px 0px 0px;
+    border: .1px solid var(--brightTextColor);
 }
 
 
@@ -245,4 +272,101 @@ body{
 
     mask-image: linear-gradient(#000,#000, #0000009f, #00000042, transparent);
     -webkit-mask-image: linear-gradient(#000, #000, #0000009f, #00000042, transparent);
+}
+
+/* This is the about me section of the website..........**/
+.aboutMeWrapper{
+    /* background: linear-gradient(90deg, #000, #013672,#000); */
+    max-height: 95vh;
+    width: 100%;
+}
+.aboutMeWrapper .aboutMe{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+}
+.aboutMe img{
+    object-fit: cover;
+    object-position: top;
+    max-height: 70vh;
+
+    mask-image: linear-gradient(#000, #000, #0000009f, #00000042, transparent);
+    -webkit-mask-image: linear-gradient(#000, #000, #0000009f, #00000042, transparent);
+}
+.aboutMe .about_text{
+    padding: 10px;
+}
+.aboutMe .about_text *{
+    margin: 20px;
+}
+.aboutMe .about_text h2{
+    color: var(--brightTextColor);
+    font-size: 2em;
+}
+.about_text{
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: var(--mildTextColor);
+}
+
+@media (max-width: 550px){
+
+    .landingPlace{
+        min-height: max-content;
+    }
+    .topHeader nav{
+        display: none;
+    }
+    .topHeader button{
+        display: none;
+    }
+    
+
+    .contentWrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .myName{
+        width: 100%;
+        margin: auto;
+    }
+    .myName .nameHolder{
+        width: 100%;
+        background: #e60b0bda;
+    }
+    .contentWrapper .myName h2{
+        font-size: 1.2em;
+        letter-spacing: 1.5px;
+    }
+    .contentWrapper .myName p{
+        font-size: .9em;
+        color: #aaa;
+        line-height: 2;
+        z-index: 9;
+        backdrop-filter: blur(3px);
+        background: #00000057;
+        padding: 5px 20px;
+    }
+
+    .absoluteImage{
+    top: 0;
+    right: 1%;
+    width: 100%;
+    height: auto;
+    min-height: 90vh;
+    z-index: 1;
+
+    background: url(assets/nguyo1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  100% 100%;
+    border-radius: 10%;
+
+    mask-image: linear-gradient(#000, #000, #0000009f, #00000042, transparent);
+    -webkit-mask-image: linear-gradient(#000, #000, #0000009f, #00000042, transparent);
+    }
 }
