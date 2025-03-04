@@ -16,6 +16,15 @@
         width: 100%;
         margin: auto;
     }
+    .load:nth-child(1) {
+        border-bottom-width: 4px;
+    }
+    .load:nth-child(2){
+        border-top-width: 4px;
+    }
+    .load:nth-child(3){
+        border-right-width: 4px;
+    }
 
 
 
@@ -26,6 +35,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        background-color: red;
     }
     .navHolder {
         display: none;
@@ -43,16 +53,14 @@
         flex-direction: column-reverse;
     }
     .contentWrapper .myName {
+        min-height: 30vh;
         gap: 10px;
-        min-height: 70dvh;
         width: 98%;
         margin: auto;
         padding: 3px 10px;
         backdrop-filter: blur(1px);
         /* background: #0000009a; */
         margin-top: -30px;
-        /* mask-image: linear-gradient(transparent, #000, #000, #000, #0000009f);
-        -webkit-mask-image: linear-gradient(transparent, #000,#000, #000, #0000009f); */
     }
     .myName .nameHolder{
         display: flex;
@@ -83,7 +91,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 70%;
+        width: 40%;
+    }
+    .home_icons a{
+        font-size: .9em;
+        border: .1px solid var(--themeColor);
+        border-radius: 50%;
+    }
+    .home_icons i{
+        width: 20px;
+        height: 20px;
     }
 
     .absoluteImage {

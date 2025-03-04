@@ -8,6 +8,7 @@ body{
     background: #111;
     /* background: linear-gradient(90deg, #013672, #000); */
     background: linear-gradient(90deg, #000, #013672);
+    min-height: 50vh;
     color: gray;
 
     --mildTextColor: rgb(168, 167, 167);
@@ -37,7 +38,7 @@ body{
 }
 
 .loadWrapper.hide_loader {
-    transform: scale(0)
+    display: none;
 }
 
 .loader_container {
