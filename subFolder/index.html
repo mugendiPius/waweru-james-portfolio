@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobileCss.css">
     <title>James Waweru</title>
 </head>
 <body>
@@ -20,18 +21,19 @@
 
 
     <section class="landingPlace">
-        <header class="topHeader">
-            <div class="logo">
-
-            </div>
-            <nav>
-                <a href="">Home</a>
-                <a href="">About Me</a>
-                <a href="">Services</a>
-                <a href="">Contacts</a>
-            </nav>
-            <button>Get in Touch</button>
-        </header>
+        <div class="navHolder">
+            <header class="topHeader">
+                <div class="logo">
+                </div>
+                <nav>
+                    <a href="">Home</a>
+                    <a href="">About Me</a>
+                    <a href="">Services</a>
+                    <a href="">Contacts</a>
+                </nav>
+                <button>Get in Touch</button>
+            </header>
+        </div>
         <div class="contentWrapper">
             <div class="myName">
                 <div class="nameHolder">
@@ -56,14 +58,15 @@
                         </div>
                 </div>
             </div>
-            <div class="absoluteImage"></div>
         </div>
+        <div class="absoluteImage"></div>
+
         <hr>
     </section>
 
     <section class="aboutMeWrapper">
         <div class="aboutMe">
-            <img src="assets/nguyo1.png" alt="">
+            <img src="" alt="">
             <div class="about_text">
                 <h2>About Me</h2>
                 <p>I am a highly skilled Biomedicine professional with a degree from the University of Lancashire, specializing in medical
@@ -71,14 +74,17 @@
                 expertise in disease pathology, molecular biology, and biomedical technologies, allowing me to contribute to
                 advancements in healthcare and medical innovation.
                 
-                My experience includes conducting laboratory research, analyzing complex biological systems, and applying evidence-based
-                methodologies to improve diagnostic accuracy and therapeutic solutions. I am particularly passionate about integrating
-                cutting-edge biotechnologies with clinical research to enhance patient care and address emerging healthcare challenges.
-                
-                Beyond technical expertise, I am committed to ethical medical practices, continuous learning, and interdisciplinary
-                collaboration. I thrive in dynamic environments where research, innovation, and healthcare intersect, and I actively
-                seek opportunities to contribute to transformative medical advancements. My goal is to leverage my knowledge and skills
-                to drive meaningful improvements in healthcare and biomedical science.....</p>
+                My experience
+                <span class="hideAboutText">
+                    includes conducting laboratory research, analyzing complex biological systems, and applying evidence-based
+                    methodologies to improve diagnostic accuracy and therapeutic solutions. I am particularly passionate about integrating
+                    cutting-edge biotechnologies with clinical research to enhance patient care and address emerging healthcare challenges.
+                    
+                    Beyond technical expertise, I am committed to ethical medical practices, continuous learning, and interdisciplinary
+                    collaboration. I thrive in dynamic environments where research, innovation, and healthcare intersect, and I actively
+                    seek opportunities to contribute to transformative medical advancements. My goal is to leverage my knowledge and skills
+                    to drive meaningful improvements in healthcare and biomedical science.
+                </span><button class="readMore">Read More</button></p>
             </div>
         </div>
     </section>
@@ -86,6 +92,12 @@
     <section class="edu_certsWrapper">
         <div class="edu_certs">
             
+        </div>
+    </section>
+
+    <section class="skillsWrapper">
+        <div class="skills">
+
         </div>
     </section>
 

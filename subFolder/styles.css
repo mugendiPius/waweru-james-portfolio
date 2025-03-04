@@ -127,12 +127,20 @@ body{
 .landingPlace{
     background: linear-gradient(90deg, #013672, #000);
 
-    min-height: 100vh;
+    min-height: 95vh;
     min-width: 100%;
     margin: auto;
 
-    mask-image: linear-gradient(#000, #000, #0000009f, transparent);
-    -webkit-mask-image: linear-gradient(#000, #000, #0000009f, transparent);
+    background: url(assets/dna.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    border-image-slice: fill 1;
+    border-image-source: linear-gradient( #013672, #01171ddc,#000);
+
+    /* mask-image: linear-gradient(#000, #000, #0000009f, transparent);
+    -webkit-mask-image: linear-gradient(#000, #000, #0000009f, transparent); */
     border-bottom: .1px solid var(--mildTextColor);
 }
 .landingPlace .topHeader{
@@ -200,7 +208,6 @@ body{
     font-size: 3em;
     letter-spacing: 10px;
     color: var(--brightTextColor);
-
 }
 .myName p{
     font-size: 1.3em;
@@ -208,7 +215,7 @@ body{
 }
 .myName .downloadCv{
     border: .1px solid gray;
-    color: var(--brightTextColor);
+    color: var(--mildTextColor);
     background-color: transparent;
     padding: 7px 14px;
     border-radius: 3px;
@@ -254,7 +261,7 @@ body{
 }
 
 
-.contentWrapper .absoluteImage{
+ .absoluteImage{
     content: '';
     position: absolute;
     top: 0;
@@ -274,99 +281,82 @@ body{
     -webkit-mask-image: linear-gradient(#000, #000, #0000009f, #00000042, transparent);
 }
 
+
+
 /* This is the about me section of the website..........**/
 .aboutMeWrapper{
-    /* background: linear-gradient(90deg, #000, #013672,#000); */
-    max-height: 95vh;
+    position: relative;
+    max-height: 40vh;
     width: 100%;
 }
 .aboutMeWrapper .aboutMe{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
     margin: auto;
+    background-attachment: fixed;
+    border-image-slice: fill 1;
+    border-image-source: linear-gradient(#000, #01171d2d, #012f83);
+    
 }
 .aboutMe img{
-    object-fit: cover;
+    /* object-fit: cover;
     object-position: top;
-    max-height: 70vh;
+    max-height: 70vh; */
 
-    mask-image: linear-gradient(#000, #000, #0000009f, #00000042, transparent);
-    -webkit-mask-image: linear-gradient(#000, #000, #0000009f, #00000042, transparent);
+    content: '';
+    position: absolute;
+    top: 0%;
+    right: 1%;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+
+    background: url(assets/microscope.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    mask-image: linear-gradient(transparent, #000, #0000009f, #00000042, transparent);
+    -webkit-mask-image: linear-gradient(transparent, #000, #0000009f, #00000042, transparent);
 }
 .aboutMe .about_text{
+    position: relative;
+    width: 100%;
+    z-index: 10;
     padding: 10px;
+}
+.about_text {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: var(--mildTextColor);
 }
 .aboutMe .about_text *{
     margin: 20px;
+}
+.about_text button{
+    background-color: transparent;
+    padding: 7px 20px;
+    border: 0px solid var(--brightTextColor);
+    font-size: 1.1em;
+    border-radius: 4px;
+    color: var(--themeColor);
+    letter-spacing: 1.2px;
+    margin: 0;
+    cursor: pointer;
+    transition:  all .5s;
+}
+.about_text button:hover{
+    text-decoration: underline;
+}
+.about_text span.hideAboutText{
+    display: none;
 }
 .aboutMe .about_text h2{
     color: var(--brightTextColor);
     font-size: 2em;
 }
-.about_text{
-    font-size: 1.2em;
-    line-height: 1.5;
-    color: var(--mildTextColor);
-}
 
-@media (max-width: 550px){
 
-    .landingPlace{
-        min-height: max-content;
-    }
-    .topHeader nav{
-        display: none;
-    }
-    .topHeader button{
-        display: none;
-    }
-    
-
-    .contentWrapper{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    .myName{
-        width: 100%;
-        margin: auto;
-    }
-    .myName .nameHolder{
-        width: 100%;
-        background: #e60b0bda;
-    }
-    .contentWrapper .myName h2{
-        font-size: 1.2em;
-        letter-spacing: 1.5px;
-    }
-    .contentWrapper .myName p{
-        font-size: .9em;
-        color: #aaa;
-        line-height: 2;
-        z-index: 9;
-        backdrop-filter: blur(3px);
-        background: #00000057;
-        padding: 5px 20px;
-    }
-
-    .absoluteImage{
-    top: 0;
-    right: 1%;
-    width: 100%;
-    height: auto;
-    min-height: 90vh;
-    z-index: 1;
-
-    background: url(assets/nguyo1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:  100% 100%;
-    border-radius: 10%;
-
-    mask-image: linear-gradient(#000, #000, #0000009f, #00000042, transparent);
-    -webkit-mask-image: linear-gradient(#000, #000, #0000009f, #00000042, transparent);
-    }
-}
