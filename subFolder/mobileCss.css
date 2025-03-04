@@ -61,10 +61,11 @@
         flex-direction: column;
     }
     .myName h2 {
-        font-size: 2em;
+        font-size: 1.4em;
         letter-spacing: 5px;
     }
     .myName p{
+        font-size: .7em;
         color: var(--mildTextColor);
     }
     .myName .downloadCv {
